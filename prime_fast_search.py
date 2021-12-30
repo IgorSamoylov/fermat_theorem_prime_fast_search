@@ -2,7 +2,7 @@ import random
 
 
 def fermat_test(p: int) -> bool:
-    """Fast checks if x is probably prime number using Fermat's little theorem"""
+    """Fast checks if x is probably prime by using a Fermat's little theorem method"""
     assert p > 1, "Exponent value must be upper 1"
 
     a = random.randint(2, 10)
@@ -13,8 +13,8 @@ def fermat_test(p: int) -> bool:
 
 
 def is_prime(x: int) -> bool:
-    """Slow checks if x is prime using sequential enumeration of divisors
-    from 2 to sqrt(x)"""
+    """Slow checks if x is prime by using a sequential enumeration of divisors
+    from 2 to sqrt(x) method"""
     divider = 2
     while divider < x ** 0.5:
         if x % divider == 0:
@@ -31,8 +31,8 @@ def generate_even_random_number(min_v: int, max_v: int) -> int:
 
 
 def generate_prime(min_v: int, max_v: int) -> int:
-    assert isinstance(min_v, int) and min_v > 0, "Wrong the begin number of the range"
-    assert isinstance(max_v, int) and max_v > min_v, "Wrong the end number of the range"
+    assert isinstance(min_v, int) and min_v > 0, "Wrong begin number of the range"
+    assert isinstance(max_v, int) and max_v > min_v, "Wrong end number of the range"
 
     verified_prime = False
     probably_prime = False
