@@ -23,7 +23,7 @@ def is_prime(x: int) -> bool:
     return True
 
 
-def generate_even_random_number(min_v: int, max_v: int) -> int:
+def generate_odd_random_number(min_v: int, max_v: int) -> int:
     x = random.randint(min_v, max_v)
     while x % 2 == 0:
         x = random.randint(min_v, max_v)
@@ -39,7 +39,7 @@ def generate_prime(min_v: int, max_v: int) -> int:
 
     while not verified_prime:
         while not probably_prime:
-            x = generate_even_random_number(min_v, max_v)
+            x = generate_odd_random_number(min_v, max_v)
             probably_prime = True
             print("Checking at Fermat's algorithm: ", x)
             for i in range(2):
